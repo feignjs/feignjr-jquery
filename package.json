@@ -4,7 +4,11 @@
   "description": "feignjs jquery client integration",
   "main": "feign-jquery.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "bower": "npm run browserify && npm run uglify",
+    "browserify": "node_modules/.bin/browserify feign-jquery.js -o dist/feign-jquery.js --s FeignJquery --no-bundle-external",
+    "uglify": "node_modules/.bin/uglify dist/feign-jquery.js -o dist/feign-jquery.min.js",
+    "prepublish": "npm run bower"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,16 @@
     "declarative",
     "jquery"
   ],
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "args-js": "global:Args",
+    "lodash": "global:_",
+    "jquery": "global:jQuery"
+  },
   "author": "Peter Mucha",
   "license": "MIT",
   "bugs": {
