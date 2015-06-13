@@ -1,0 +1,32 @@
+{
+  "name": "feignjs-jquery",
+  "version": "0.0.1",
+  "homepage": "https://github.com/feignjs/feignjs-jquery",
+  "authors": [
+    "Peter Mucha <ptmucha@gmail.com>"
+  ],
+  "description": "feignjs rest client",
+  "main": "dist/feign-jquery.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "feignjs",
+    "rest",
+    "client",
+    "jquery"
+  ],
+  "dependencies": {
+    "args-js": "^0.10.6",
+    "lodash": "^3.9.3",
+    "jquery": "~2.1.4"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

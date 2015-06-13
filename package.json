@@ -7,8 +7,7 @@
     "test": "npm test",
     "bower": "npm run browserify && npm run uglify",
     "browserify": "node_modules/.bin/browserify feign-jquery.js -o dist/feign-jquery.js --s FeignJquery --no-bundle-external",
-    "uglify": "node_modules/.bin/uglify dist/feign-jquery.js -o dist/feign-jquery.min.js",
-    "prepublish": "npm run bower"
+    "uglify": "node_modules/.bin/uglify dist/feign-jquery.js -o dist/feign-jquery.min.js"
   },
   "repository": {
     "type": "git",
@@ -39,7 +38,14 @@
   "homepage": "https://github.com/feignjs/feignjs-jquery#readme",
   "dependencies": {
     "args-js": "^0.10.6",
+    "domino": "^1.0.18",
     "jquery": "^2.1.4",
-    "lodash": "^3.9.3"
+    "lodash": "^3.9.3",
+    "xmlhttprequest": "^1.7.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "browserify-shim": "^3.8.8",
+    "uglify": "^0.1.5"
   }
 }
