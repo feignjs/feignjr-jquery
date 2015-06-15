@@ -7,7 +7,7 @@
     "test": "npm test",
     "bower": "npm run browserify && npm run uglify",
     "browserify": "node_modules/.bin/browserify feign-jquery.js -o dist/feign-jquery.js --s FeignJquery --no-bundle-external",
-    "uglify": "node_modules/.bin/uglify dist/feign-jquery.js -o dist/feign-jquery.min.js"
+    "uglify": "node_modules/.bin/uglifyjs dist/feign-jquery.js -o dist/feign-jquery.min.js"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,6 @@
   "devDependencies": {
     "browserify": "^10.2.4",
     "browserify-shim": "^3.8.8",
-    "uglify": "^0.1.5"
+    "uglify-js": "^2.4.23"
   }
 }
