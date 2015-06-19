@@ -55,7 +55,7 @@ FeignJqueryClient.prototype._createJQueryJsOptions = function(baseUrl, requestOp
       jqSettings.data = parameters;
     }
     if (this.isJson){
-      if (jqSettings.data){
+      if (jqSettings.data && jqSettings.method !== 'GET'){
         jqSettings.data = JSON.stringify(jqSettings.data);
       }
       jqSettings.contentType = "application/json; charset=utf-8";
