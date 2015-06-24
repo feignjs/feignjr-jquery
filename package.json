@@ -1,6 +1,6 @@
 {
   "name": "feignjs-jquery",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "feignjs jquery client integration",
   "main": "feign-jquery.js",
   "scripts": {

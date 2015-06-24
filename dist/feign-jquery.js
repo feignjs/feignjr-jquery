@@ -16,15 +16,11 @@ if (typeof window === 'undefined') { // Running in NodeJS
 function FeignJqueryClient(){
   var args  = Args([
       { defaults: Args.OBJECT | Args. Optional, _default: {}},
-      { jQuery: Args.ANY | Args.Optional, _default: jq},
-      { json: Args.BOOL | Args.Optional, _default: true},
+      { jQuery: Args.ANY | Args.Optional, _default: jq}
     ], arguments);
 
   this.jQuery = args.jQuery;
   this.defaults = args.defaults;
-  this.isJson = args.json;
-  
- 
 }
 
 FeignJqueryClient.prototype.request =  function(request){
@@ -54,16 +50,9 @@ FeignJqueryClient.prototype._createJQueryJsOptions = function(baseUrl, requestOp
     if (parameters != null){
       jqSettings.data = parameters;
     }
-    if (this.isJson){
-      if (jqSettings.data && jqSettings.method !== 'GET'){
-        jqSettings.data = JSON.stringify(jqSettings.data);
-      }
-      jqSettings.contentType = "application/json; charset=utf-8";
-      jqSettings.dataType = "json";
-    }
   
   return jqSettings;
-}
+};
 
 
 module.exports = FeignJqueryClient;
