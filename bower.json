@@ -1,6 +1,6 @@
 {
   "name": "feignjs-jquery",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/feignjs/feignjs-jquery",
   "authors": [
     "Peter Mucha <ptmucha@gmail.com>"
