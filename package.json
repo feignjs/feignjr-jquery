@@ -1,12 +1,12 @@
 {
   "name": "feignjs-jquery",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "feignjs jquery client integration",
   "main": "feign-jquery.js",
   "scripts": {
     "test": "npm test",
     "bower": "npm run browserify && npm run uglify",
-    "browserify": "node_modules/.bin/browserify feign-jquery.js -o dist/feign-jquery.js --s FeignJquery --no-bundle-external",
+    "browserify": "node_modules/.bin/browserify feign-jquery.js -o dist/feign-jquery.js --s FeignJquery --no-bundle-external -t browserify-shim",
     "uglify": "node_modules/.bin/uglifyjs dist/feign-jquery.js -o dist/feign-jquery.min.js"
   },
   "repository": {
@@ -20,11 +20,6 @@
     "declarative",
     "jquery"
   ],
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
   "browserify-shim": {
     "args-js": "global:Args",
     "lodash": "global:_",
